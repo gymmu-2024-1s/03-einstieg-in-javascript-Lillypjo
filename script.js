@@ -152,3 +152,16 @@ export function aufgabe09(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
+
+export function aufgabe13(args) {
+  const input = args
+  const result = []
+  // Suche die Position des letzten `e`s in einem Text
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      return i
+    }
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
