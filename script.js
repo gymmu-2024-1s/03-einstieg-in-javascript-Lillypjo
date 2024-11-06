@@ -140,23 +140,15 @@ export function aufgabe012(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe12]", aufgabe012)
 
-export function aufgabe08(args) {
+export function aufgabe09(args) {
   const input = args
-  let result = ""
+  const result = []
 
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-
-    // Ersetze "e" durch "3", ansonsten füge das Zeichen unverändert hinzu
-    if (currentElement === "e") {
-      result += "3"
-    } else {
-      // andere Zeichen
-      result += currentElement
-    }
+  // teste ob einne eingabe genau 6 zeichen lang ist
+  if (input.length === 6) {
+    return true
+  } else {
+    return false
   }
-
-  return result
 }
-
-linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
+linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
