@@ -118,3 +118,24 @@ export function aufgabe05(args) {
   return hasUpperCaseLetter
 }
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
+
+export function aufgabe012(args) {
+  const input = args
+  const result = []
+  // Erstelle eine Variable um die Position des ersten e's zu speichern
+  let firstEPosition = -1
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    // Wenn du ein e findest, speichere die Position
+    if (currentElement === "e") {
+      firstEPosition = i
+      break // Schleife abbrechen, da das erste "e" gefunden wurde
+    }
+  }
+
+  // Gebe die Position des ersten e's aus
+  return firstEPosition
+}
+linkupExerciseHandler("[data-click=aufgabe12]", aufgabe012)
