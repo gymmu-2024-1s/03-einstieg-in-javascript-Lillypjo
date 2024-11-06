@@ -139,3 +139,24 @@ export function aufgabe012(args) {
   return firstEPosition
 }
 linkupExerciseHandler("[data-click=aufgabe12]", aufgabe012)
+
+export function aufgabe08(args) {
+  const input = args
+  let result = ""
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    // Ersetze "e" durch "3", ansonsten füge das Zeichen unverändert hinzu
+    if (currentElement === "e") {
+      result += "3"
+    } else {
+      // andere Zeichen
+      result += currentElement
+    }
+  }
+
+  return result
+}
+
+linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
