@@ -165,3 +165,16 @@ export function aufgabe13(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
+
+export function aufgabe14(args) {
+  const input = args
+  const result = []
+  // Suche die Position des dritten `e`s in einem Text
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      return i
+    }
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
