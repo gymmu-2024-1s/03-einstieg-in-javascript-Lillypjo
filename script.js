@@ -206,3 +206,10 @@ export function aufgabe15(args) {
   return input.split(" ").join("")
 }
 linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
+
+export function aufgabe16(args) {
+  const input = args
+  //Lesen Sie die Eingabe bis zum Zeichen '$' als ersten Teil einer Liste ein, und den Rest als den zweiten Teil
+  return input.split("$")
+}
+linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
