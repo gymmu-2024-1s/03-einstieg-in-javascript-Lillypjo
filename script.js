@@ -156,13 +156,19 @@ linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
 export function aufgabe13(args) {
   const input = args
   const result = []
+
+  // speichere die position von e
+  let lastEPosition = -1
   // Suche die Position des letzten `e`s in einem Text
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === "e") {
-      return i
+      lastEPosition = i
     }
   }
+
+  // Gebe die Position des letzten `e`s aus
+  return lastEPosition
 }
 linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
 
@@ -178,3 +184,25 @@ export function aufgabe14(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
+
+export function aufgabe11(args) {
+  const input = args
+
+  //Erstelle eie Variable um den ACII-Code zu speichern
+  let asciiCode = null
+
+  //Speichere den ASCII-Code vom ersten Zeichen
+  asciiCode = input.charCodeAt(0)
+
+  //Gib den ASCII-Code zurück
+  return asciiCode
+}
+linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
+
+export function aufgabe15(args) {
+  const input = args
+
+  //Lesen Sie die Eingabe nur bis zum ersten Leerzeichen ein.
+  return input.split(" ").join("")
+}
+linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
