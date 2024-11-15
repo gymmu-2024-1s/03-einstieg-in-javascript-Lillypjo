@@ -234,3 +234,14 @@ export function aufgabe19(args) {
   return result
 }
 linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
+
+export function aufgabe21(args) {
+  const input = args
+  const result = []
+  //Kehren Sie die Eingabe um.
+  for (let i = input.length - 1; i >= 0; i--) {
+    result.push(input[i])
+  }
+  return result
+}
+linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
