@@ -201,15 +201,36 @@ linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
 
 export function aufgabe15(args) {
   const input = args
-
-  //Lesen Sie die Eingabe nur bis zum ersten Leerzeichen ein.
-  return input.split(" ").join("")
+  const result = []
+  //Eingabe bis zum ersten Leerzeichen einlesen
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === " ") {
+      break
+    }
+    result.push(currentElement)
+  }
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
 
-export function aufgabe16(args) {
+export function aufgabe18(args) {
   const input = args
-  //Lesen Sie die Eingabe bis zum Zeichen '$' als ersten Teil einer Liste ein, und den Rest als den zweiten Teil
-  return input.split("$")
+  const result = []
+  //Schreiben Sie folgende Ausgabe: Sie heissen `name` und sind `alter` Jahre alt, wobei 'name' und 'alter' durch Eingaben eingesetzt werden.
+  result.push("Ich heisse Lilly und bin 17 Jahre alt")
+  return result
 }
-linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
+linkupExerciseHandler("[data-click=aufgabe18]", aufgabe18)
+
+export function aufgabe19(args) {
+  const input = args
+  const result = []
+  //Jedes Zeichen in der Eingabe soll verdoppelt werden.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement + currentElement)
+  }
+  return result
+}
+linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
