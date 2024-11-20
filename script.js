@@ -291,3 +291,20 @@ export function aufgabe24(args) {
   return result
 }
 linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
+
+export function aufgabe06(args) {
+  const input = args
+  const result = []
+  //Schreibe eine Funktion, die testet, ob in einem Text mindestens ein Sonderzeichen vorkommt.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (
+      currentElement === "!" ||
+      currentElement === "." ||
+      currentElement === "?"
+    ) {
+      return true
+    }
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
