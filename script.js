@@ -372,3 +372,18 @@ export function aufgabe10(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
+
+export function aufgabe16(args) {
+  const input = args
+  const result = []
+  //Lesen Sie die Eingabe bis zum Zeichen '$' als ersten Teil einer Liste ein, und den Rest als den zweiten Teil.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "$") {
+      return [result, input.slice(i + 1)]
+    } else {
+      result.push(currentElement)
+    }
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
