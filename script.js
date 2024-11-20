@@ -387,3 +387,33 @@ export function aufgabe16(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
+
+export function aufgabe17(args) {
+  const input = args
+  const result = []
+  //Lesen Sie die Eingabe als Liste ein, Einträge in der Liste werden von einem ',' getrennt.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === ",") {
+      return result
+    } else {
+      result.push(currentElement)
+    }
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
+
+export function aufgabe20(args) {
+  const input = args
+  const result = []
+  //Prüfen sie ob nach jedem '.' ein Leerschlag kommt.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === ".") {
+      if (input[i + 1] === " ") {
+        return true
+      }
+    }
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
