@@ -260,3 +260,16 @@ export function aufgabe22(args) {
   return result
 }
 linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
+
+export function aufgabe23(args) {
+  const input = args
+  const result = []
+  //Das erste Zeichen der Eingabe soll zusätzlich ganz vorne und ganz hinten an der Aufgabe angehängt werden.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+  result.push(input[0])
+  return result
+}
+linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
