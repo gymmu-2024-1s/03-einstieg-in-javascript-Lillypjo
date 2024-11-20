@@ -308,3 +308,20 @@ export function aufgabe06(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
+
+export function aufgabe07(args) {
+  const input = args
+  const result = []
+  //Schreibe eine Funktion, die testet, ob in einem Text das Wort 'und' vorkommt.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (
+      currentElement === "u" &&
+      input[i + 1] === "n" &&
+      input[i + 2] === "d"
+    ) {
+      return true
+    }
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
