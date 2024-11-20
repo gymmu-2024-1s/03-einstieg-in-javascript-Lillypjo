@@ -341,3 +341,34 @@ export function aufgabe08(args) {
   return result
 }
 linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
+
+export function aufgabe10(args) {
+  const input = args
+  const result = []
+  //Teste ob eine Eingabe ein korrekter RGB Hexcode ist.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (
+      currentElement === "#" ||
+      currentElement === "0" ||
+      currentElement === "1" ||
+      currentElement === "2" ||
+      currentElement === "3" ||
+      currentElement === "4" ||
+      currentElement === "5" ||
+      currentElement === "6" ||
+      currentElement === "7" ||
+      currentElement === "8" ||
+      currentElement === "9" ||
+      currentElement === "a" ||
+      currentElement === "b" ||
+      currentElement === "c" ||
+      currentElement === "d" ||
+      currentElement === "e" ||
+      currentElement === "f"
+    ) {
+      return true
+    }
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
