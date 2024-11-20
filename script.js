@@ -325,3 +325,19 @@ export function aufgabe07(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
+
+export function aufgabe08(args) {
+  const input = args
+  const result = []
+  //Ersetze alle `e`s mit einer `3`.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      result.push("3")
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result
+}
+linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
