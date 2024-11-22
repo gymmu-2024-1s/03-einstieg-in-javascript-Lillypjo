@@ -119,27 +119,6 @@ export function aufgabe05(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
-export function aufgabe012(args) {
-  const input = args
-  const result = []
-  // Erstelle eine Variable um die Position des ersten e's zu speichern
-  let firstEPosition = -1
-
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-
-    // Wenn du ein e findest, speichere die Position
-    if (currentElement === "e") {
-      firstEPosition = i
-      break // Schleife abbrechen, da das erste "e" gefunden wurde
-    }
-  }
-
-  // Gebe die Position des ersten e's aus
-  return firstEPosition
-}
-linkupExerciseHandler("[data-click=aufgabe12]", aufgabe012)
-
 export function aufgabe09(args) {
   const input = args
   const result = []
@@ -420,3 +399,70 @@ export function aufgabe20(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
+
+export function aufgabe27(args) {
+  const input = args
+  const result = []
+  //Testen sie, ob eine Eingabe eine Zahl ist.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (
+      currentElement === "0" ||
+      currentElement === "1" ||
+      currentElement === "2" ||
+      currentElement === "3" ||
+      currentElement === "4" ||
+      currentElement === "5" ||
+      currentElement === "6" ||
+      currentElement === "7" ||
+      currentElement === "8" ||
+      currentElement === "9"
+    ) {
+      return true
+    }
+  }
+  return false
+}
+linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
+
+export function aufgabe25(args) {
+  const input = args
+  const result = []
+  //Das mittlere Zeichen der Eingabe soll gelöscht werden. Wenn die Anzahl Zeichen gerade ist, sollen die beiden mittleren Zeichen gelöscht werden.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (i === input.length / 2) {
+      return input.slice(0, i) + input.slice(i + 1)
+    }
+  }
+  return input
+}
+linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
+
+export function aufgabe26(args) {
+  const input = args
+  const result = []
+  //Vergleichen Sie die ersten beiden Zeichen der Eingabe und vertauschen Sie diese so dass Sie alphanumerisch sortiert sind.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (i === input.length / 2) {
+      return input.slice(0, i) + input.slice(i + 1)
+    }
+  }
+  return input
+}
+linkupExerciseHandler("[data-click=aufgabe26]", aufgabe26)
+
+export function aufgabe28(args) {
+  const input = args
+  const result = []
+  //Testen Sie, ob in der Eingabe 2 Zahlen von einem Leerzeichen getrennt sind. Falls ja geben Sie die Summe der beiden Zahlen als Ausgabe aus; sonst Fehlermeldung.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === " ") {
+      return input.slice(0, i) + input.slice(i + 1)
+    }
+  }
+  return input
+}
+linkupExerciseHandler("[data-click=aufgabe28]", aufgabe28)
