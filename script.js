@@ -273,19 +273,24 @@ linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
 
 export function aufgabe06(args) {
   const input = args
-  const result = []
-  //Schreibe eine Funktion, die testet, ob in einem Text mindestens ein Sonderzeichen vorkommt.
+  let hasSpecialCharacter = false
+
+  // Wir definieren einen Ausdruck, der nach besonderen Zeichen sucht
+  const specialCharacterRegex = /[!@#$%^&*(),.?":{}|<>]/
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (
-      currentElement === "!" ||
-      currentElement === "." ||
-      currentElement === "?"
-    ) {
-      return true
+
+    // Wir prüfen, ob das Zeichen ein Sonderzeichen ist
+    if (specialCharacterRegex.test(currentElement)) {
+      hasSpecialCharacter = true
+      break // Wir steigen aus der Schleife aus, sobald wir ein besonderes Zeichen finden.
     }
   }
+
+  return hasSpecialCharacter
 }
+
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
 
 export function aufgabe07(args) {
@@ -432,10 +437,11 @@ export function aufgabe25(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (i === input.length / 2) {
-      return input.slice(0, i) + input.slice(i + 1)
+    } else {
+      result.push(currentElement)
     }
   }
-  return input
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
 
@@ -466,3 +472,17 @@ export function aufgabe28(args) {
   return input
 }
 linkupExerciseHandler("[data-click=aufgabe28]", aufgabe28)
+
+export function aufgabe12(args) {
+  const input = args
+  const result = []
+  //Suche die Position des ersten `e`s in einem Text.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      return i
+    }
+  }
+  return -1
+}
+linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
