@@ -50,7 +50,7 @@ linkupExerciseHandler("[data-click=aufgabe01]", aufgabe01)
 export function aufgabe02(args) {
   const input = args
   const result = []
-
+  //Alles gross schreiben.
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     const uppercaseletter = currentElement.toUpperCase()
@@ -67,7 +67,7 @@ export function aufgabe03(args) {
   const input = args
   const result = []
   let count = 0
-
+  //Zähle alle `e`s in einem Text.
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === "e") {
@@ -88,7 +88,7 @@ export function aufgabe04(args) {
   const input = args
   const result = []
   let count = 0
-
+  //Zähle alle Wörter in einem Text.
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === " ") {
@@ -102,16 +102,16 @@ linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 
 export function aufgabe05(args) {
   const input = args
-  const result = []
-
+  //Schreibe eine Funktion, die testet, ob in einem Text mindestens ein Großbuchstaben vorkommt.
   let hasUpperCaseLetter = false
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    const UpperCaseVersion = currentElement.toUpperCase()
 
-    const toUpperCaseVersion = currentElement.toUpperCase()
-    if (currentElement === " ") {
-    } else if (toUpperCaseVersion === currentElement) {
+    if (currentElement === ".") {
+    } else if (currentElement === " ") {
+    } else if (UpperCaseVersion === currentElement) {
       hasUpperCaseLetter = true
     }
   }
