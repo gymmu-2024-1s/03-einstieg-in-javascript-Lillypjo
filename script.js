@@ -231,7 +231,7 @@ export function aufgabe19(args) {
     const currentElement = input[i]
     result.push(currentElement + currentElement)
   }
-  return result
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
 
@@ -242,7 +242,7 @@ export function aufgabe21(args) {
   for (let i = input.length - 1; i >= 0; i--) {
     result.push(input[i])
   }
-  return result
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
 
@@ -288,7 +288,7 @@ export function aufgabe24(args) {
       result.push(currentElement)
     }
   }
-  return result
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
 
@@ -323,6 +323,7 @@ export function aufgabe07(args) {
       return true
     }
   }
+  return false
 }
 linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
 
@@ -338,7 +339,7 @@ export function aufgabe08(args) {
       result.push(currentElement)
     }
   }
-  return result
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
 
@@ -385,6 +386,7 @@ export function aufgabe16(args) {
       result.push(currentElement)
     }
   }
+  return result
 }
 linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
 
@@ -400,6 +402,7 @@ export function aufgabe17(args) {
       result.push(currentElement)
     }
   }
+  return result
 }
 linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
 
