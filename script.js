@@ -278,13 +278,13 @@ export function aufgabe06(args) {
   const input = args
   let hasSpecialCharacter = false
 
-  // Wir definieren einen Ausdruck, der nach besonderen Zeichen sucht
+  // Ausdruck, der nach Sonderzeichen sucht definieren
   const specialCharacterRegex = /[!@#$%^&*(),.?":{}|<>]/
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
-    // Wir prüfen, ob das Zeichen ein Sonderzeichen ist
+    // Prüfen, ob das Zeichen ein Sonderzeichen ist
     if (specialCharacterRegex.test(currentElement)) {
       hasSpecialCharacter = true
       break // Wir steigen aus der Schleife aus, sobald wir ein besonderes Zeichen finden.
