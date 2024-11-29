@@ -181,16 +181,19 @@ linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
 export function aufgabe15(args) {
   const input = args
   const result = []
-  //Eingabe bis zum ersten Leerzeichen einlesen
+
   for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
+    const currentElement = input[i] // Aktuelles Zeichen aus `input`
     if (currentElement === " ") {
-      break
+      // Wenn das aktuelle Zeichen ein Leerzeichen ist
+      break // Beende die Schleife
     }
-    result.push(currentElement)
+    result.push(currentElement) // Füge das aktuelle Zeichen zur `result`-Liste hinzu
   }
+
   return result.join("")
 }
+
 linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
 
 export function aufgabe18(args) {
