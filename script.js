@@ -301,17 +301,22 @@ export function aufgabe07(args) {
   const result = []
   //Schreibe eine Funktion, die testet, ob in einem Text das Wort 'und' vorkommt.
   for (let i = 0; i < input.length; i++) {
+    // Schleife durchläuft jedes Zeichen des Strings `input`
+
     const currentElement = input[i]
+    // Zeichen im String wird in `currentElement` gespeichert
+
     if (
-      currentElement === "u" &&
-      input[i + 1] === "n" &&
-      input[i + 2] === "d"
+      currentElement === "u" && // Prüft, ob das aktuelle Zeichen "u" ist
+      input[i + 1] === "n" && // Prüft, ob das nächste Zeichen "n" ist
+      input[i + 2] === "d" // Prüft, ob das übernächste Zeichen "d" ist
     ) {
       return true
     }
   }
   return false
 }
+
 linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
 
 export function aufgabe08(args) {
