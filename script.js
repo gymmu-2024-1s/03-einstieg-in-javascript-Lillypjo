@@ -186,11 +186,10 @@ export function aufgabe15(args) {
     const currentElement = input[i] // Aktuelles Zeichen aus `input`
     if (currentElement === " ") {
       // Wenn das aktuelle Zeichen ein Leerzeichen ist
-      break // Beende die Schleife
+      break // Schleife beenden
     }
     result.push(currentElement) // Füge das aktuelle Zeichen zur `result`-Liste hinzu
   }
-
   return result.join("")
 }
 
@@ -369,21 +368,6 @@ export function aufgabe17(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
 
-export function aufgabe20(args) {
-  const input = args
-  const result = []
-  //Prüfen sie ob nach jedem '.' ein Leerschlag kommt.
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    if (currentElement === ".") {
-      if (input[i + 1] === " ") {
-        return true
-      }
-    }
-  }
-}
-linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
-
 export function aufgabe27(args) {
   const input = args
   const result = []
@@ -485,3 +469,19 @@ export function aufgabe10(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
+
+export function aufgabe20(args) {
+  const input = args
+  const result = []
+  //Prüfen Sie ob nach jedem . ein Leerschlag kommt.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === ".") {
+      if (input[i + 1] !== " ") {
+        return false
+      }
+    }
+  }
+  return true
+}
+linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
