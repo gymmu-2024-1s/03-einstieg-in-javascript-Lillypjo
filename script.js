@@ -252,7 +252,7 @@ export function aufgabe23(args) {
     result.push(currentElement)
   }
   result.push(input[0])
-  return result
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
 
