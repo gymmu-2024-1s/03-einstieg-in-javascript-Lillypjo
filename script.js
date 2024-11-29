@@ -338,16 +338,18 @@ linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
 export function aufgabe16(args) {
   const input = args
   const result = []
+
   //Lesen Sie die Eingabe bis zum Zeichen '$' als ersten Teil einer Liste ein, und den Rest als den zweiten Teil.
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === "$") {
-      return [result, input.slice(i + 1)]
+      return result
     } else {
       result.push(currentElement)
     }
   }
-  return result
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
 
@@ -400,6 +402,7 @@ export function aufgabe27(args) {
       currentElement === "8" ||
       currentElement === "9"
     ) {
+      // Hier testet man auf alle Ziffern einzeln.
       return true
     }
   }
