@@ -525,3 +525,15 @@ export function aufgabe31(args) {
 }
 // Das ist meine eigene Aufgabe. Ich habe die Aufgabe 15 als Grundlage genommen und mein eigenes Zeichen hinzugefügt.
 linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31)
+
+export function aufgabe32(args) {
+  const input = args
+  const result = []
+  //Jedes Zeichen in der Eingabe soll verdreifacht werden. Das ist meine eigene Aufgabe. Ich habe die Aufgabe 19 als Grundlage genommen und den Befehl von ''verdoppeln'' auf ''verdreifachen'' geändert.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement + currentElement + currentElement) // 3 mal currentElement, damit die Zeichen verdreifacht werden
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe32]", aufgabe32)
