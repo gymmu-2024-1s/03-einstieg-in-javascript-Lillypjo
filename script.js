@@ -92,11 +92,10 @@ export function aufgabe04(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === " ") {
-      // zähle
       count = count + 1
     }
   }
-  return count + 1 // weil ein wort mehr wie Leerzeichen
+  return count + 1
 }
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 
@@ -497,7 +496,7 @@ linkupExerciseHandler("[data-click=aufgabe26]", aufgabe26)
 export function aufgabe30(args) {
   const input = args
   const result = []
-  //Ersetze alle ` ` mit einem `-`.   (Die eigene Aufgabe) Ich habe die Aufgabe 08 als Grundlage genommen.
+  //Ersetze alle ` ` mit einem `-`.  Das ist meine eigene Aufgabe. Ich habe die Aufgabe 08 als Grundlage genommen und meine eigenen Zeichen hinzugefügt.
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === " ") {
@@ -509,3 +508,20 @@ export function aufgabe30(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30)
+
+export function aufgabe31(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i] // Aktuelles Zeichen aus `input`
+    if (currentElement === ".") {
+      // Wenn das aktuelle Zeichen ein Punkt ist
+      break // Schleife beenden
+    }
+    result.push(currentElement) // Füge das aktuelle Zeichen zur `result`-Liste hinzu
+  }
+  return result.join("")
+}
+// Das ist meine eigene Aufgabe. Ich habe die Aufgabe 15 als Grundlage genommen und mein eigenes Zeichen hinzugefügt.
+linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31)
