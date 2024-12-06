@@ -493,3 +493,19 @@ export function aufgabe26(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe26]", aufgabe26)
+
+export function aufgabe30(args) {
+  const input = args
+  const result = []
+  //Ersetze alle ` ` mit einem `-`.   (Die eigene Aufgabe) Ich habe die Aufgabe 08 als Grundlage genommen.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === " ") {
+      result.push("-")
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30)
