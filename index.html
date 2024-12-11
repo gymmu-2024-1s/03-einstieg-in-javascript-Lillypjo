@@ -64,14 +64,34 @@
             <section>
               <p>
                 Bei diesem Sortierverfahren werden einfach gesagt die Elemte
-                nach Grösse sortiert. Dafür braucht man mehrere Durchgänge, da
-                immer nur die nebeneinander stehenden Zeichen miteinander
-                verglichen werden.
+                nach Grösse sortiert. Man beginnt link und braucht dafür mehrere
+                Durchgänge, da immer nur die 2 nebeneinander stehenden Zeichen
+                miteinander verglichen werden.
               </p>
-
               <p>Zum Beispiel</p>
+              <p>1. Durchlauf</p>
+              <p>55 07 18 02 44 wird zu 07 55 02 18 44</p>
+              <p>2. Durchlauf</p>
+              <p>07 55 02 18 44 wird zu 07 02 55 18 44</p>
+              <p>3. Durchlauf</p>
+              <p>07 02 55 18 44 wird zu 07 02 18 55 44</p>
+              <p>und so weiter...</p>
+              <p>Endresultat: 02 07 18 44 55</p>
             </section>
           </li>
+          <li>Selection Sort:</li>
+          <p>
+            Hier sucht man nach dem grössten Element und fügt es an dem Anfang
+            oder Ende ein. Wenn man nun 1 Element an den Anfang setzt,
+            (sortierter Bereich) hat der unsortierte Bereich 1 Element weniger.
+            Im nächsten Durchgang sucht man das zweitrösste Element aus dem
+            unsortierten Bereich. So geht das ganze dann weiter, bis alles der
+            Grösse nach sortiert ist. (Ich sortiere von klein nach gross.)
+          </p>
+          <p>Zum Beispiel</p>
+          <p>1. Durchlauf</p>
+          <p>55 07 18 02 44 wird zu 02 07 18 55 44</p>
+          <p>Endresultat: 02 07 18 44 55</p>
         </ol>
       </section>
     </div>
