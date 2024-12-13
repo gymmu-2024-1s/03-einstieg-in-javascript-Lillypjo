@@ -140,15 +140,14 @@ linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
 
 export function aufgabe11(args) {
   const input = args
+  const result = []
+  //Gib den ASCII code eines einzelnen Buchstabens an. Null zurückgeben, wenn mehr als ein Zeichen gegeben ist oder wenn keine Eingabe gegeben ist.
 
-  //Erstelle eie Variable um den ACII-Code zu speichern
-  let asciiCode = null
-
-  //Speichere den ASCII-Code vom ersten Zeichen
-  asciiCode = input.charCodeAt(0)
-
-  //Gib den ASCII-Code zurück
-  return asciiCode
+  if (input.length === 1) {
+    return input.charCodeAt(0)
+  } else {
+    return null
+  }
 }
 linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
 
@@ -501,7 +500,8 @@ export function aufgabe05(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement >= "A" && currentElement <= "Z") {
-      return true
+      // Falls es einen Grossbuchdtstaben von A bis Z gibt
+      return true // Gib true zurück
     }
   }
   return false
