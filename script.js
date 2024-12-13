@@ -66,21 +66,15 @@ linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
 export function aufgabe03(args) {
   const input = args
   const result = []
-  let count = 0
-  //Zähle alle `e`s in einem Text.
+
+  //Zähle alle `e`s in einem Text. (auch E's)
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === "e") {
-      // zähle
-      count = count + 1
-    } else if (currentElement === "E") {
-      // zähle
-      count = count + 1
-    } else {
-      // nicht zählen
+    if (currentElement === "e" || currentElement === "E") {
+      result.push(currentElement)
     }
   }
-  return count
+  return result.length
 }
 linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
 
@@ -98,25 +92,6 @@ export function aufgabe04(args) {
   return count + 1
 }
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
-
-export function aufgabe05(args) {
-  const input = args
-  //Schreibe eine Funktion, die testet, ob in einem Text mindestens ein Großbuchstaben vorkommt.
-  let hasUpperCaseLetter = false
-
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    const UpperCaseVersion = currentElement.toUpperCase()
-
-    if (currentElement === ".") {
-    } else if (currentElement === " ") {
-    } else if (UpperCaseVersion === currentElement) {
-      hasUpperCaseLetter = true
-    }
-  }
-  return hasUpperCaseLetter
-}
-linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
 export function aufgabe09(args) {
   const input = args
@@ -518,3 +493,17 @@ export function aufgabe32(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe32]", aufgabe32)
+
+export function aufgabe05(args) {
+  const input = args
+  const result = []
+  //Schreibe eine Funktion, die testet, ob in einem Text mindestens ein Grossbuchstabe vorkommt.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement >= "A" && currentElement <= "Z") {
+      return true
+    }
+  }
+  return false
+}
+linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
