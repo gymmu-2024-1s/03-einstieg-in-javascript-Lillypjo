@@ -436,25 +436,6 @@ export function aufgabe12(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
 
-export function aufgabe10(args) {
-  const input = args
-  const result = []
-
-  // Testet, ob eine Eingabe ein korrekter RGB-Hexcode ist
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-
-    if (currentElement === "#") {
-      // Überprüft, ob das aktuelle Element ein '#' ist
-      return true // Gibt 'true' zurück, wenn ein '#' gefunden wird
-    }
-  }
-
-  return false // Gibt 'false' zurück, wenn kein '#' gefunden wird
-}
-
-linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
-
 export function aufgabe20(args) {
   const input = args
   const result = []
