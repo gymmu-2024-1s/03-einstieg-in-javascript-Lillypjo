@@ -125,19 +125,6 @@ export function aufgabe13(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
 
-export function aufgabe14(args) {
-  const input = args
-  const result = []
-  // Suche die Position des dritten `e`s in einem Text
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    if (currentElement === "e") {
-      return i
-    }
-  }
-}
-linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
-
 export function aufgabe11(args) {
   const input = args
   const result = []
@@ -150,23 +137,6 @@ export function aufgabe11(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
-
-export function aufgabe15(args) {
-  const input = args
-  const result = []
-
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i] // Aktuelles Zeichen aus `input`
-    if (currentElement === " ") {
-      // Wenn das aktuelle Zeichen ein Leerzeichen ist
-      break // Schleife beenden
-    }
-    result.push(currentElement) // Füge das aktuelle Zeichen zur `result`-Liste hinzu
-  }
-  return result.join("")
-}
-
-linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
 
 export function aufgabe18(args) {
   const input = args
@@ -507,3 +477,19 @@ export function aufgabe05(args) {
   return false
 }
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
+
+export function aufgabe15(args) {
+  const input = args
+  const result = []
+  // Lesen Sie die Eingabe nur bis zum ersten Leerzeichen ein. Sollte nach dem ersten ' ' abbrechen, Sollte '_' ganz normal lesen.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === " ") {
+      return result.join("")
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
