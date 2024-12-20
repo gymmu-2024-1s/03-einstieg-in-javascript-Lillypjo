@@ -493,3 +493,44 @@ export function aufgabe15(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
+
+export function aufgabe10(args) {
+  const input = args
+  //Teste ob eine Eingabe ein korrekter RGB Hexcode ist.
+
+  if (input[0] === "#" && input.length === 7) {
+    return true
+  } else {
+    return false
+  }
+}
+
+linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
+
+export function aufgabe14(args) {
+  const input = args
+  let thirdEPosition = -1
+  //die zählen postition anfängt mit -1
+  let count = 0
+  //es zählt wie viele "e" in eine zeile gibt
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    //Man such die erstes "e" im Text
+    if (currentElement === "e") {
+      count++
+      //wenn eine "e" findet, dann wird die count um 1 erhöht
+    }
+    if (count === 3) {
+      //wenn die count schon 3 ist, sollte sich diese Position speichern und der loop beenden.
+      thirdEPosition = i
+      break
+    }
+  }
+
+  return thirdEPosition
+  //sagt die letzte position der "e" nach der beendungs des loops
+}
+
+linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
