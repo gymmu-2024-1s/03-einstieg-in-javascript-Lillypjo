@@ -381,8 +381,6 @@ export function aufgabe20(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
 
-linkupExerciseHandler("[data-click=aufgabe26]", aufgabe26)
-
 export function aufgabe30(args) {
   const input = args
   const result = []
@@ -561,5 +559,3 @@ export function aufgabe04(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
-
-// Diese Funktion sortiert die Eingabe alphanumerisch und gibt das Ergebnis als String zurück.
