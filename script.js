@@ -337,20 +337,6 @@ export function aufgabe25(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
 
-export function aufgabe28(args) {
-  const input = args
-  const result = []
-  //Testen Sie, ob in der Eingabe 2 Zahlen von einem Leerzeichen getrennt sind. Falls ja geben Sie die Summe der beiden Zahlen als Ausgabe aus; sonst Fehlermeldung.
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    if (currentElement === " ") {
-      return input.slice(0, i) + input.slice(i + 1)
-    }
-  }
-  return input
-}
-linkupExerciseHandler("[data-click=aufgabe28]", aufgabe28)
-
 export function aufgabe12(args) {
   const input = args
   const result = []
