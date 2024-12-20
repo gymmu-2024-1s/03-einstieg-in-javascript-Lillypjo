@@ -78,21 +78,6 @@ export function aufgabe03(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
 
-export function aufgabe04(args) {
-  const input = args
-  const result = []
-  let count = 0
-  //Zähle alle Wörter in einem Text.
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    if (currentElement === " ") {
-      count = count + 1
-    }
-  }
-  return count + 1
-}
-linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
-
 export function aufgabe09(args) {
   const input = args
   const result = []
@@ -192,8 +177,8 @@ export function aufgabe23(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     result.push(currentElement)
+    result.push(currentElement)
   }
-  result.push(input[0])
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
@@ -396,26 +381,6 @@ export function aufgabe20(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
 
-export function aufgabe26(args) {
-  const input = args
-  const result = []
-  //Vergleichen Sie die ersten beiden Zeichen der Eingabe. vertauschen Sie diese so, dass Sie alphanumerisch sortiert sind.
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    if (i === 0) {
-      const first = currentElement
-      const second = input[1]
-      if (first > second) {
-        result.push(second)
-        result.push(first)
-      } else {
-        result.push(first)
-        result.push(second)
-      }
-    }
-  }
-  return result.join("")
-}
 linkupExerciseHandler("[data-click=aufgabe26]", aufgabe26)
 
 export function aufgabe30(args) {
@@ -517,20 +482,84 @@ export function aufgabe14(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
-    //Man such die erstes "e" im Text
+    //Such das erste "e" im Text
     if (currentElement === "e") {
       count++
-      //wenn eine "e" findet, dann wird die count um 1 erhöht
+      //findet man ein "e" , wird der Count um 1 erhöht
     }
     if (count === 3) {
-      //wenn die count schon 3 ist, sollte sich diese Position speichern und der loop beenden.
+      //ist der count schon 3, sollte sich diese Position speichern und den Loop beenden.
       thirdEPosition = i
       break
     }
   }
 
   return thirdEPosition
-  //sagt die letzte position der "e" nach der beendungs des loops
+  //Sagt die letzte position des "e" nach der Beendungs des Loops
 }
 
 linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
+
+export function aufgabe04(args) {
+  const input = args
+
+  const result = []
+
+  //Eingabe filtern, damit nur Buchstaben und Leerzeichen übrig bleiben.
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    const ascii = currentElement.charCodeAt(0)
+
+    if (ascii >= 65 && ascii <= 90) {
+      //Grossbuchstabe
+
+      result.push(currentElement)
+    } else if (ascii >= 97 && ascii <= 122) {
+      //Kleinbuchstabe
+
+      result.push(currentElement)
+    } else if (ascii === 32) {
+      //Leerzeichen
+
+      result.push(currentElement)
+    }
+  }
+
+  //Mögliche Leerzeichen am Stück rausfiltern.
+
+  const result2 = []
+
+  for (let i = 0; i < result.length; i++) {
+    const currentElement = result[i]
+
+    const nextElement = result[i + 1]
+
+    if (currentElement === " " && nextElement === " ") {
+      //2 Leerzeichen nacheinander, das erste wird ignoriert.
+    } else {
+      result2.push(currentElement)
+    }
+  }
+
+  //Leerzeichen zählen.
+
+  let count = 0
+
+  for (let i = 0; i < result2.length; i++) {
+    const currentElement = result2[i]
+
+    if (currentElement === " ") {
+      count++
+    }
+  }
+
+  //Es gibt ein Wort mehr als Leerzeichen --> Leerzeichen wird zurückgegeben.
+
+  return count + 1
+}
+
+linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
+
+// Diese Funktion sortiert die Eingabe alphanumerisch und gibt das Ergebnis als String zurück.
